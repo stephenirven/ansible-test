@@ -8,3 +8,10 @@
     ansible.builtin.shell: date >> somelog.txt
     args:
       chdir: ~/
+
+  - name: Example clone of a single branch
+  ansible.builtin.git:
+    repo: https://github.com/stephenirven/ansible-test
+    dest: /tmp/repos
+    single_branch: yes
+    version: master
