@@ -15,6 +15,14 @@
   - name: Example clone of a single branch
     ansible.builtin.git:
       repo: https://github.com/stephenirven/ansible-test
-      dest: /tmp/repos
+      dest: /tmp/repos/ansible-test
       single_branch: yes
       version: main
+
+  - name: Copy file with owner and permissions
+    ansible.builtin.copy:
+      src: /srv/myfiles/foo.conf
+      dest: /tmp/repos/ansible-test
+      owner: stephenirven
+      group: everyone
+      mode: '0777'      
