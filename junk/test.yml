@@ -2,7 +2,8 @@
 - name: Example Simple Playbook
   hosts: localhost
   become: no
-  
+
+  tasks: 
   - name: Example clone of a single branch
     ansible.builtin.git:
       repo: https://github.com/stephenirven/ansible-test
