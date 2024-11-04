@@ -13,8 +13,8 @@
 
   - name: Copy file with owner and permissions
     ansible.builtin.copy:
-      src: /srv/myfiles/foo.conf
-      dest: /tmp/repos/ansible-test
+      src: /tmp/repos/ansible-test/
+      dest: /tmp/repos/ansible-test/
       owner: stephenirven
       group: everyone
       mode: '0777'      
