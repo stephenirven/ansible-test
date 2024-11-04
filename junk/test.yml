@@ -7,5 +7,5 @@
   - name: Copy file example_file to /tmp with permissions
     ansible.builtin.copy:
       src: ./exercise.js
-      dest: /tmp/example_file
+      dest: ./example_file
       mode: '0644'
