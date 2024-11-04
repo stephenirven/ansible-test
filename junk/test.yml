@@ -7,4 +7,4 @@
   - name: Change the working directory to somedir/ before executing the command
     ansible.builtin.shell: date >> somelog.txt
     args:
-      chdir: somedir/
+      chdir: ~/
