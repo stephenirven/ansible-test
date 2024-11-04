@@ -14,4 +14,4 @@
       repo: https://github.com/stephenirven/ansible-test
       dest: /tmp/repos
       single_branch: yes
-      version: master
+      version: main
