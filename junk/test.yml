@@ -15,6 +15,4 @@
     ansible.builtin.copy:
       src: /tmp/repos/ansible-test/
       dest: /tmp/repos/ansible-test/
-      owner: stephenirven
-      group: everyone
       mode: '0777'      
