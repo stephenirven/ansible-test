@@ -4,8 +4,5 @@
   become: no
   
   tasks:
-  - name: Copy file example_file to /tmp with permissions
-    ansible.builtin.copy:
-      src: /home/stephenirven/exercise.js
-      dest: /home/stephenirven/example_file
-      mode: '0644'
+  - name: Execute the command in remote shell; stdout goes to the specified file on the remote
+  ansible.builtin.shell: echo "foo" > /tmp/output.txt
