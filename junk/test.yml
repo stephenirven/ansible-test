@@ -4,7 +4,7 @@
   become: no
   
   tasks:
-  - name: Execute the command in remote shell; stdout goes to the specified file on the remote
-    ansible.builtin.shell: date >> output.txt
+  - name: Change the working directory to somedir/ before executing the command
+    ansible.builtin.shell: date >> somelog.txt
     args:
-    chdir: ~/
+      chdir: somedir/
