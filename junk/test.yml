@@ -1,5 +1,8 @@
 ---
 - name: Example Simple Playbook
+  hosts: localhost
+  become: no
+  
   tasks:
   - name: Copy file example_file to /tmp with permissions
     ansible.builtin.copy:
