@@ -6,6 +6,6 @@
   tasks:
   - name: Copy file example_file to /tmp with permissions
     ansible.builtin.copy:
-      src: ~/exercise.js
-      dest: ~/example_file
+      src: /home/stephenirven/exercise.js
+      dest: /home/stephenirven/example_file
       mode: '0644'
