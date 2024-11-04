@@ -10,8 +10,8 @@
       chdir: ~/
 
   - name: Example clone of a single branch
-  ansible.builtin.git:
-    repo: https://github.com/stephenirven/ansible-test
-    dest: /tmp/repos
-    single_branch: yes
-    version: master
+    ansible.builtin.git:
+      repo: https://github.com/stephenirven/ansible-test
+      dest: /tmp/repos
+      single_branch: yes
+      version: master
