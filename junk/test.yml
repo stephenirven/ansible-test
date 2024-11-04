@@ -8,6 +8,9 @@
     ansible.builtin.shell: date >> somelog.txt
     args:
       chdir: ~/
+      
+  - name: date
+    ansible.builtin.shell: date
 
   - name: Example clone of a single branch
     ansible.builtin.git:
