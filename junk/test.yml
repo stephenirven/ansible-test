@@ -3,7 +3,11 @@
   hosts: localhost
   become: no
 
-  tasks: 
+  tasks:
+  - name: Copy 'test-file-1' from Local to Remote location
+    copy:
+      src: /tmp/output.txt
+      dest: /tmp/output.txt
   - name: Example clone of a single branch
     ansible.builtin.git:
       repo: https://github.com/stephenirven/ansible-test
