@@ -1,0 +1,17 @@
+---
+- name: Build process for tests
+  hosts: localhost
+  become: no
+
+  tasks:
+     
+  - name: Clone test
+    ansible.builtin.git:
+      repo: https://github.com/stephenirven/ansible-test
+      dest: /tmp/repos/ansible-test
+      force: true
+      single_branch: yes
+      version: main
+
+  - name: Run build command
+    ansible.builtin.command: cat date >> /tmp/repos/ansible-test/build-date.txt
