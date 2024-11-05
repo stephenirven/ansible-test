@@ -13,6 +13,7 @@
     ansible.builtin.git:
       repo: https://github.com/stephenirven/ansible-test
       dest: /tmp/repos/ansible-test
+      force: true
       single_branch: yes
       version: main
 
