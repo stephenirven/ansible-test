@@ -1,5 +1,5 @@
 ---
-- hosts: mygroup
+- hosts: all
   gather_facts: false
   tasks:
     - shell: date
