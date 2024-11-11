@@ -1,24 +1,11 @@
 ---
-- name: Example Simple Playbook
-  hosts: localhost
-  become: no
-
-  tasks:     
-  - name: Example clone of a single branch
-    ansible.builtin.git:
-      repo: https://github.com/stephenirven/ansible-test
-      dest: /tmp/repos/ansible-test
-      force: true
-      single_branch: yes
-      version: main
-
-  - name: Copy file with owner and permissions
-    ansible.builtin.copy:
-      src: /tmp/repos/ansible-test/
-      dest: /tmp/repos/ansible-test/
-      mode: '0777'        
-
-#  - name: Change the working directory to somedir/ before executing the command
- #   ansible.builtin.shell: loghost.sh
-  #  args:
-   #   chdir: /tmp/
+- hosts: mygroup
+  gather_facts: false
+  tasks:
+    - shell: date
+      register: date_res
+      changed_when: false
+    - debug:
+        msg: "{{ ansible_play_hosts | map('extract', hostvars, 'date_res') | map(attribute='stdout') | list }}"
+      run_once: yes
+      
