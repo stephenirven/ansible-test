@@ -12,7 +12,13 @@
       single_branch: yes
       version: main
 
-  - name: Change the working directory to somedir/ before executing the command
-    ansible.builtin.shell: loghost.sh
-    args:
-      chdir: /tmp/
+  - name: Copy file with owner and permissions
+    ansible.builtin.copy:
+      src: /tmp/repos/ansible-test/
+      dest: /tmp/repos/ansible-test/
+      mode: '0777'        
+
+#  - name: Change the working directory to somedir/ before executing the command
+ #   ansible.builtin.shell: loghost.sh
+  #  args:
+   #   chdir: /tmp/
