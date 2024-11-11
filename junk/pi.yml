@@ -1,6 +1,6 @@
 ---
 - name: Example Simple Playbook
-  hosts:
+  hosts: localhost
   become: no
 
   tasks:     
